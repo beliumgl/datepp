@@ -73,7 +73,7 @@ The format string uses the following tokens:
 - `DD`, `MM`, `YY` - Fill with zeros (e.g., "01", "09", "05").
 - Single token (e.g., `D`, `M`, `Y`) - Short names or no leading zeros.
 
-- NOTE: If there are at least one DD or MM or HH, etc., then date and time will also be filled with zeros
+- NOTES: If there are at least one DD or MM or HH, etc., then date and time will also be filled with zeros. If any of H, I, or S is specified, the resulting string will still include all hours, minutes, and seconds.
 ### Format Order
 
 - **The order of D, M (or A), and Y is important!**
