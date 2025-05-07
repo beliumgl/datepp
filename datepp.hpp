@@ -206,7 +206,10 @@ namespace beliumgl {
          */
         template<typename T>
         inline std::string padZeros(T num) {
-            return (num < 10 && num >= 0 ? "0" : "") + std::to_string(static_cast<T>(num));
+            if (num >= 0)
+                return (num < 10 ? "0" : "") + std::to_string(static_cast<T>(num));
+            else
+                return (num > -10 ? "-0" : "") + std::to_string(static_cast<T>(num * -1));
         }
 
         inline bool isLeapYear(year_t year) {
